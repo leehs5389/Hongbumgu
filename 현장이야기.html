@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   <style>
+    body {margin :0;}
+/* Common Style */
+* {margin:0;padding:0;}
+html, body {margin:0;padding:0;height:100%;}
+body {font-family:"돋움",Dotum,sans-serif,Arial;font-size:12px;position:relative;}
+table, div {border-collapse:collapse;}
+select, textarea,input {font-family:"돋움",Helvetica,sans-serif;font-size:12px;color:#000;vertical-align:top;}
+form, ul, ol, dl, table, div, h1, h2, h3 ,h4 {margin:0;padding:0;}
+h1, h2, h3 ,h4, h5, h6 {font-size:12px;text-decoration:none;}
+img, fieldset {border:0;margin:0;padding:0;}
+select, input, li, img {vertical-align:top;}
+ul, li, dl, dt, dd {list-style-type:none;}
+caption {text-indent:-5000px;line-height:0;font-size:0;}
+legend {text-indent:-5000px;line-height:0;font-size:0;position:absolute;top:0;left:0;}
+hr {display:none;}
+a:link {text-decoration:none;color:#333;}
+a:visited {text-decoration:none;color:#333;}
+a:hover {text-decoration:underline;color:#dc3731;}
+a:active {text-decoration:none;color:#333;}
+
+/*skipNavigation*/
+#skip {overflow:hidden;display:block;width:0;height:0;text-align:center;color:#000;}
+a#skip:focus,a#skip:active {width:auto;height:auto;padding:5px;background:#f2f2f2;border:1px solid #ddd;display:block;}
+
+
+/* layout */
+.index {width:100%;min-width:1440px;background-color:white;}
+.index #Layout {margin-bottom:5px;border-bottom:1px solid #d2d2d2;background-color:#fff !important;background-image:none !important;}
+.index #Layout .bg {overflow:hidden;background-color:#ebe8e9;}
+.index #Layout .bg .gnb {width:1030px;height:32px;line-height:32px;margin:0 auto;font-size:12px;}
+.index #Layout .bg .left_menu{float:left;}
+.index #Layout .bg .right-menu{float:right;}
+.index #Layout .bg .left_menu {float:left;}
+.index #Layout .bg .left_menu a {color:black;text-decoration:none;}
+.index #Layout .bg .left_menu a.login {margin-right:20px;font-weight:bold;}
+.index #Layout .bg .right_menu {float:right;color:#8eaded;}
+.index #Layout .bg .right_menu a {color:black;text-decoration:none;}
+.index #Layout .bg .right_menu a .member {margin-top: 4.5px; padding:0 15px ; font-size:12px; font-weight:bold; text-indent:0;text-align:center;text-decoration:none;}
+.index #Layout .bg .right_menu a .id {margin-top: 4.5px; width:75px;padding:0 15px ;background: white;border-radius:0px;color:black; font-size:12px; font-weight:bold;text-indent:0;text-align:center;text-decoration:none;}
+.index #Layout .bg .right_menu a .psw {margin-top: 4.5px;width:75px;padding:0 15px ;background: white;border-radius:0px;color:black; font-size:12px; font-weight:bold;text-indent:0;text-align:center;text-decoration:none;}
+.index #Layout .bg .right_menu a .button01{width:50px;padding:0 5px ;background:#f0e8e8 ;border-radius:5px;color:black; font-size:12px; font-weight:bold;text-indent:0;text-align:center;text-decoration:none;}
+.index #Layout .main_menu {position:relative;width:1080px;height:62px;margin:0 auto; padding:0 auto; background:#f00d28;}
+.index #Layout .main_menu .bg{background-color:gray;}
+.index #Layout .main_menu .logo {float:left;padding:15px 18px 0 0;}
+.index #Layout .main_menu .btn_box {float:right;padding:22px 0 0 0;}
+.index #Layout .main_menu .btn_box .btn_write01 {margin-right:12px;}
+.index #Layout .main_menu .list_menu {float:left;display:table;height:62px;}
+.index #Layout .main_menu .list_menu li {position:relative;display:table-cell;float:left;height:62px;}
+.index #Layout .main_menu .list_menu li a {display:block;}
+.index #Layout .main_menu .list_menu li .top01 {width:88px;}
+.index #Layout .main_menu .list_menu li .top02 {width:110px;}
+.index #Layout .main_menu .list_menu li .top03 {width:93px;}
+.index #Layout .main_menu .list_menu li .top04 {width:57px;}
+.index #Layout .main_menu .list_menu li .top05 {width:40px;}
+.index #Layout .main_menu .list_menu li .top06 {width:69px;}
+.index #Layout .main_menu .list_menu li .top07 {width:125px;}
+.index #Layout .main_menu .list_menu li .top08 {width:82px;}
+.index #Layout .main_menu .list_menu li .top09 {width:93px;}
+.index #Layout .main_menu .list_menu li a .icon_menu {display:block;height:62px;background:url("https://postfiles.pstatic.net/MjAyMDAxMTZfMjc4/MDAxNTc5MTQ3ODgxODY4.yHQhwniIt7mHspM_Oz2SO_OWui5Iy067Yc0namyyzQAg.qJZah3hXZJwXRsq5yuArPx1ADqDHr_kLn21_vQ1apwsg.GIF.leehs5389/%EB%A9%94%EC%9D%B8%EB%A9%94%EB%89%B4.gif?type=w580") 0 0 no-repeat;text-indent:-999999px;}
+.index #Layout .main_menu .list_menu li a .menu01 {background-position:0 0;}
+.index #Layout .main_menu .list_menu li a .menu02 {background-position:-88px 0;}
+.index #Layout .main_menu .list_menu li a .menu03 {background-position:-198px 0;}
+.index #Layout .main_menu .list_menu li a .menu04 {background-position:-291px 0;}
+.index #Layout .main_menu .list_menu li a .menu05 {background-position:-380px 0;}
+.index #Layout .main_menu .list_menu li a .menu06 {background-position:-390px 0;}
+.index #Layout .main_menu .list_menu li a .menu07 {background-position:-450px 0;}
+.index #Layout .main_menu .list_menu li a .menu08 {background-position:-583px 0;}
+.index #Layout .main_menu .list_menu li a.on .menu01 {background-position:0 -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu02 {background-position:-88px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu03 {background-position:-198px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu04 {background-position:-291px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu05 {background-position:-350px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu06 {background-position:-415px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu07 {background-position:-498px -62px;}
+.index #Layout .main_menu .list_menu li a.on .menu08 {background-position:-583px -62px;}
+
+/*table */
+table.type09 {
+    position:relative;width:1080px;height:62px;margin:0 auto;
+    background:white;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+table.type09 tbody th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.type09 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+/* footer */
+.footer {position:absolute; bottom:0px; margin:30px auto 0;padding:20px 0;width:100%;text-align:center;color:#cfdbf5;background-color:#f00d28;font-size:12px;}
+.footer .link > strong {margin:0 23px;color:#fff;}
+.footer .link a {margin:0 12px;color:#cfdbf5;}
+.footer .link span {color:#97b3ee;}
+.footer .copy {margin-top:15px;}
+.footer .copy h2 {display:inline;margin-right:5px;}
+
+
+   </style>
+  </head>
+
+  <body>
+    <div id="wrap" class="index">
+     <div class='header' id='Layout'>
+        <div class="bg">
+             <div class="gnb">
+                 <div class="left_menu"><a>카모밀레</a> - <a>해방가들을 위한 커뮤니티</a> </div>
+                 <div class="right_menu">
+                     <a><span class="member">회원가입</span></a>
+                     <a><input type="text" class="id"  onclick="alert('영어만 입력해주세요')"  placeholder="아이디"></a>
+                     <a><input type="password" class="psw" placeholder="비밀번호"></a>
+                     <a><button class="button01">로그인</button></a>
+                 </div>
+             </div>
+         </div>
+       <div class="main_menu">
+          <h1 class="logo"><a href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%EC%B9%B4%EB%AA%A8%EB%B0%80%EB%A0%88.html"><img src="https://postfiles.pstatic.net/MjAyMDAxMTZfMjY2/MDAxNTc5MTQyMDE5NDAy.tdeTxyLl4sQOC5_9yND3KTsba5zG3vo_7cAuqw9Q8D0g.ewMCk6JrLlhvzp1IZqfXACEaeOqlOYu1jzLnvHA5r7Ig.GIF.leehs5389/icon.gif?type=w580" alt="카모밀레" title="카모밀레" </a></h1>
+          <ul class="list_menu">
+            <li>
+              <a  href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%EB%85%B8%EB%8F%99%EC%83%81%EB%8B%B4.html" class="top01"><span class="icon_menu menu01"></a>
+            </li>
+            <li>
+                <a href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%ED%98%84%EC%9E%A5%EC%9D%B4%EC%95%BC%EA%B8%B0.html"class="top02"><span class="icon_menu menu02"></a>
+           </li>
+           <li>
+             <a href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%EC%97%B0%EB%8C%80%EC%9A%94%EC%B2%AD.html" class="top03"><span class="icon_menu menu03"></a>
+           </li>
+           <li>
+               <a  class="top04"><span class="icon_menu menu04"></a>
+          </li>
+          <li>
+            <a href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%EB%89%B4%EC%8A%A4.html" class="top05"><span class="icon_menu menu05"></a>
+          </li>
+         <li>
+           <a href="file:///C:/Bitnami/wampstack-7.3.13-0/apache2/htdocs/%EC%9E%90%EC%9C%A0%EA%B2%8C%EC%8B%9C%ED%8C%90.html" class="top07"><span class="icon_menu menu07"></a>
+         </li>
+         <li>
+           <a class="top08"><span class="icon_menu menu08"></a>
+         </li>
+          </ul>
+     </div>
+   </div>
+   <div>
+
+</div>
+     <div class="footer">
+        <div class='link'>
+            <strong>억압된 세상을 해방시키기 위한 해방가들의 커뮤니티!</strong><span>&#124;</span>
+            <a>인터넷광고·제휴문의</a><span>&#124;</span>
+            <a>사이트관련문의</a><span>&#124;</span>
+            <a>청소년보호정책</a><span>&#124;</span>
+            <a>이용약관</a><span>&#124;</span>
+            <a><strong>개인정보처리방침</strong></a>
+        </div>
+        <div class='copy'>
+              <h2><img src= alt='MLB PARK' /></h2>
+              <span>Copyright by CHAMOMILE. All rights reserved. Since 2020</span>
+          </div>
+      </div>
+
+    </body>
+</html>
